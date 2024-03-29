@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_hospital" model="ir.module.category">
+        <field name="name">Hospital</field>
+        <field name="sequence">-100</field>
+    </record>
+
+    <record id="hospital_management.group_patient" model="res.groups">
+        <field name="name">Patient Group</field>
+        <field name="category_id" ref="module_hospital"/>
+    </record>
+
+    <record id="base.group_user" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('hospital_management.group_patient'))]"/>
+    </record>
+
+    <record id="hospital_management.group_nurse" model="res.groups">
+        <field name="name">Nurse Group</field>
+        <field name="category_id" ref="module_hospital"/>
+        <field name="implied_ids" eval="[(4, ref('hospital_management.group_patient'))]"/>
+    </record>
+
+    <record id="hospital_management.group_doctor" model="res.groups">
+        <field name="name">Doctor Group</field>
+        <field name="category_id" ref="module_hospital"/>
+        <field name="implied_ids" eval="[(4, ref('group_nurse'))]"/>
+    </record>
+</odoo>

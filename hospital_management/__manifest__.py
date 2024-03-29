@@ -21,12 +21,20 @@
     'version': '0.1',
     'application': True,
     # any module necessary for this one to work correctly
-    'depends': ['base','sale'],
+    'depends': ['base', 'sale'],
 
     # always loaded
     'data': [
+        'security/group.xml',
+        'security/ir.model.access.csv',
+        'views/menu_item.xml',
+        'views/hospital_nurse.xml',
+        'views/hospital_patient.xml',
+        'views/hospital_doctor.xml',
         'views/inherit_sale_order.xml',
         'views/res_config_settings_views.xml',
+        'views/inherit_hrm_employee.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

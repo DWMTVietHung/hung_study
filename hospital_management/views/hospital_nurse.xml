@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="actions_hospital_nurse" model="ir.actions.act_window">
+        <field name="name">actions_hospital_nurse</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('specialist','=','nurse')]</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="menu_hospital_nurse" name="Nurse" parent="hospital_root_menu" action="actions_hospital_nurse"
+              groups ="hospital_management.group_nurse" sequence="15"/>
+</odoo>
