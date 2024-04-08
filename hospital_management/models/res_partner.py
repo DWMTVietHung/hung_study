@@ -1,7 +1,7 @@
 from odoo import fields, models, api
 
 
-class HrEmployee(models.Model):
+class ContactHospital(models.Model):
     _inherit = 'res.partner'
 
     specialist = fields.Selection([
@@ -9,5 +9,6 @@ class HrEmployee(models.Model):
         ('nurse', 'Nurse'),
         ('patient', 'Patient')
     ], string='Specialist', default='doctor')
-
     gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string='Gender', default='male')
+    medication_order_lineids= fields.One2many("oder.medication.line","order_id")
+    

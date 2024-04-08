@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_res_partner_patient,name_access_res_partner_patient,model_res_partner,group_patient,1,1,1,1
 access_res_partner_nurse,name_access_res_partner_nurse,model_res_partner,group_nurse,1,1,1,1
 access_res_partner_doctor,name_access_res_partner_doctor,model_res_partner,group_doctor,1,1,1,1
+access_medicine_all,name_access_medicine_all,model_medication,base.group_user,1,1,1,1
+access_medicine_line_all,name_access_medicine_line_all,model_oder_medication_line,base.group_user,1,1,1,1

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="view_medication_form" model="ir.ui.view">
+            <field name="name">medication.form</field>
+            <field name="model">medication</field>
+            <field name="arch" type="xml">
+                <form string="Medication">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="price"/>
+                            <field name="manufacturing_date"/>
+                            <field name="expiry_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_medication_tree" model="ir.ui.view">
+            <field name="name">medication.tree</field>
+            <field name="model">medication</field>
+            <field name="arch" type="xml">
+                <tree string="Medications">
+                    <field name="name"/>
+                    <field name="manufacturing_date"/>
+                    <field name="expiry_date"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for Medication -->
+        <record id="action_medication" model="ir.actions.act_window">
+            <field name="name">Medications</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">medication</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_medication_list" name="Medication List" parent="hospital_root_menu"
+                  action="action_medication" groups ="hospital_management.group_doctor" sequence="25"/>
+    </data>
+</odoo>

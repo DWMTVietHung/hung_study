@@ -34,6 +34,8 @@
         'views/inherit_sale_order.xml',
         'views/res_config_settings_views.xml',
         'views/inherit_hrm_employee.xml',
+        'views/medicine.xml',
+
 
     ],
     # only loaded in demonstration mode
