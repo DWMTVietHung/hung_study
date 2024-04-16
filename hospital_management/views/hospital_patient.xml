@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
                 <page string="Order Medicine" name="Order Medicine">
-                    <field name="medication_order_lineids">
+                    <field name="medication_order_lineids" widget="section_and_note_one2many">
                         <tree string="Oder Medicine line" editable="bottom">
                             <field name="name_medicine"/>
                             <field name="description"/>

@@ -24,6 +24,10 @@
             <field name="model">medication</field>
             <field name="arch" type="xml">
                 <tree string="Medications">
+                    <header>
+                        <button name="export_medicine_action" string="Run" type="object"
+                                class="btn-primary"/>
+                    </header>
                     <field name="name"/>
                     <field name="manufacturing_date"/>
                     <field name="expiry_date"/>
@@ -41,6 +45,6 @@
         </record>
 
         <menuitem id="menu_medication_list" name="Medication List" parent="hospital_root_menu"
-                  action="action_medication" groups ="hospital_management.group_doctor" sequence="25"/>
+                  action="action_medication" groups="hospital_management.group_doctor" sequence="25"/>
     </data>
 </odoo>
